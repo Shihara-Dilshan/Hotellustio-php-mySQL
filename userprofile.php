@@ -28,7 +28,7 @@
             $mobile = $_SESSION['$mobile'];
            	$creditcard = $_SESSION['$cre'];
             $cpin = $_SESSION['$pin'];
-            //$id = $_SESSION['$id'];
+            $id = $_SESSION['uid'];
 
             //$password = $_SESSION['pword'].'sdshjdghsgdhgshgdjsg';
     
