@@ -4,7 +4,7 @@
 
   require('includes/config.php');
   
-  $sql2 = 'SELECT  * FROM RoomType';
+  $sql2 = 'SELECT  * FROM roomtype';
   
   $result = mysqli_query($conn, $sql2);
 
@@ -14,7 +14,7 @@
  
   //mysqli_close($conn);
 
-  $sql3 = 'SELECT  * FROM Package';
+  $sql3 = 'SELECT  * FROM package';
   
   $result2 = mysqli_query($conn, $sql3);
 
@@ -29,7 +29,7 @@
     $rooID = $_POST['room_id'];
     $numROOM = $_POST['num_room'];
     
-    $sql5 = "SELECT  * FROM RoomType WHERE TypeID = '$rooID'";
+    $sql5 = "SELECT  * FROM roomtype WHERE id = '$rooID'";
   
     $result5 = mysqli_query($conn, $sql5);
 
@@ -83,7 +83,7 @@
             $fname = $_SESSION['$fname'];
             $mobile = $_SESSION['$mobile'];
             $email = $_SESSION['$email'];
-            $id = $_SESSION['$id'];
+            $id = $_SESSION['uid'];
             //$password = $_SESSION['pword'].'sdshjdghsgdhgshgdjsg';
     
         }
@@ -121,12 +121,12 @@
             <select style="width: 97%;height: 40px;" name="room_id">
                 <?php  foreach($rooms as $room) { 
 
-                  $TypeID = $room['TypeID'];
+                  $TypeID = $room['id'];
 
 
 
                  ?>
-                <option  value="<?php echo ($room['TypeID']);?>" > <?php echo htmlspecialchars(ucfirst($room['Rtypename'])) . ' - LKR ' . htmlspecialchars ($room['Rtypeprice']);?></option>
+                <option  value="<?php echo ($room['id']);?>" > <?php echo htmlspecialchars(ucfirst($room['type'])) . ' - LKR ' . htmlspecialchars ($room['price']);?></option>
                 <?php } ?>
                 </select>
                 <h3 style="padding-top: 1%;padding-bottom: 0%;color:black;font-family: monospace; font-weight: normal;">NUMBER OF ROOMS </h3>
