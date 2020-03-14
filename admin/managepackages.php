@@ -10,7 +10,7 @@
 
   require('includes/config.php');
 
-  $sql = 'SELECT  * FROM Package';
+  $sql = 'SELECT  * FROM package';
   
   $result = mysqli_query($conn, $sql);
 
@@ -88,8 +88,8 @@
                 <tr>
                 <td><?php echo htmlspecialchars($package['PID']);?></td>
                 <td><?php echo htmlspecialchars($package['Pname']);?></td>
-                <td><?php echo htmlspecialchars($package['Pdetails']);?></td>
-                <td><?php echo htmlspecialchars($package['Pprice']);?></td>
+                <!--td><?php echo htmlspecialchars($package['Pdetails']);?></td-->
+                <td><?php echo htmlspecialchars($package['price']);?></td>
                               
                 <td width="400px"><a href="editpackage.php?PID=<?php echo($package['PID']);?>"><button id="tab1"> update</button></a><a href="deletepackage.php"><button id="tab2" style="margin-left: 10px;">delete</button></a></td>
 
