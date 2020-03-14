@@ -15,7 +15,7 @@
         $password = mysqli_real_escape_string($conn ,$_POST['pword']);
 
        
-        $sql = "SELECT FullName , Email , MobileNo , CredicardNo , CardPin  FROM user WHERE UserName = '$username' AND Password = '$password' AND Type != 'A'" ;
+        $sql = "SELECT id , FullName , Email , MobileNo , CredicardNo , CardPin  FROM user WHERE UserName = '$username' AND Password = '$password' AND Type != 'A'" ;
       
         $result = mysqli_query($conn, $sql);
 
@@ -32,8 +32,10 @@
 
 
             $_SESSION['login'] = true;
+
             $_SESSION['uname'] = $_POST['uname'];
             $_SESSION['pword'] = $_POST['pword'];
+            $_SESSION['uid'] = $rows['id'];
             $_SESSION['$fname'] = $rows['FullName'];
             $_SESSION['$email'] = $rows['Email'];
             $_SESSION['$mobile'] = $rows['MobileNo'];
