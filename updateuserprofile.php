@@ -25,7 +25,7 @@
             $fname = $_SESSION['$fname'];
             $mobile = $_SESSION['$mobile'];
             $email = $_SESSION['$email'];
-            $id = $_SESSION['$id'];
+            $id = $_SESSION['uid'];
             //$password = $_SESSION['pword'].'sdshjdghsgdhgshgdjsg';
     
         }
@@ -50,16 +50,16 @@
         //$newpassword = mysqli_real_escape_string($conn ,$_POST['npword']);
         
 
-        $sql2 = "SELECT * FROM user WHERE Password = '$oldpassword' AND UserID = '$id'";
+        $sql = "SELECT * FROM user WHERE Password = '$oldpassword' AND id = '$id'";
       
-        $aresult = mysqli_query($conn,$sql2);
+        $result = mysqli_query($conn,$sql);
 
-        $arows=mysqli_fetch_array($aresult,MYSQLI_ASSOC);
+        $arows=mysqli_fetch_array( $result , MYSQLI_ASSOC);
         
-        if(mysqli_num_rows($aresult)==1)
+        if(mysqli_num_rows($result)==1)
         {
 
-            $sql = "UPDATE user SET FullName = '$profile' , UserName = '$username' , Email = '$email' , MobileNo = '$mobile' WHERE Password = '$oldpassword' AND UserID = '$id'"
+            $sql = "UPDATE user SET FullName = '$profile' , UserName = '$username' , Email = '$email' , MobileNo = '$mobile' WHERE Password = '$oldpassword' AND id = '$id'"
             ;
             
                     
@@ -71,7 +71,7 @@
 
             if(mysqli_query($conn,$sql))
             {
-                        $sql2 = "SELECT * FROM user WHERE Password = '$oldpassword' AND UserID = '$id'";
+                        $sql2 = "SELECT * FROM user WHERE Password = '$oldpassword' AND id = '$id'";
       
                         $result2 = mysqli_query($conn,$sql2);
 
@@ -108,7 +108,7 @@
 
         
 
-        }else if(mysqli_num_rows($aresult)==0)
+        }else if(mysqli_num_rows($result)==0)
             {
 
                 echo "<script>alert('There is an error with your request');
