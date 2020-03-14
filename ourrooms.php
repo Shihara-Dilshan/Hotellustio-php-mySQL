@@ -42,14 +42,14 @@
 
     <?php  foreach($rooms as $room) { ?>
                 <h2 style="font-family: monospace;">
-                <div class="dash1" style="margin-left: 50px;border-radius: 5px;background-color: rgb(0,0,0,0.5);height: auto;width: auto;border-style: ridge;color:white;text-align: center; display: inline-block;float:left;margin-top: 40px;margin-right: 100px;"><h3 style="color:rgb(255,255,255,0.7);font-weight: normal;font-family: monospace;font-size: 30px;margin-top: 0px;"><?php echo htmlspecialchars(strtoupper($room['Rtypename']));?></h3>
+                <div class="dash1" style="margin-left: 50px;border-radius: 5px;background-color: rgb(0,0,0,0.5);height: auto;width: auto;border-style: ridge;color:white;text-align: center; display: inline-block;float:left;margin-top: 40px;margin-right: 100px;"><h3 style="color:rgb(255,255,255,0.7);font-weight: normal;font-family: monospace;font-size: 30px;margin-top: 0px;"><?php echo htmlspecialchars(strtoupper($room['type']));?></h3>
                 <ul style="text-align: left;color:rgb(255,255,255,0.9);font-weight: normal;font-family: monospace;font-size: 25px;">
 
                 <!--li>Room id : <?php //echo htmlspecialchars($room['TypeID']);?></li-->
-                <li>Room name : <?php echo htmlspecialchars(ucfirst($room['Rtypename']));?></li>
-                <li id="rdets">Room details : <?php echo htmlspecialchars(ucfirst($room['TypeDetails']));?></li>
-                <li>Room price : <?php echo htmlspecialchars($room['Rtypeprice']).' LKR per one night';?></li>
-                <li>Available rooms : <?php echo htmlspecialchars(ucfirst($room['availrooms']));?></li>
+                <li>Room name : <?php echo htmlspecialchars(ucfirst($room['type']));?></li>
+                <!--li id="rdets">Room details : <?php echo htmlspecialchars(ucfirst($room['TypeDetails']));?></li-->
+                <li>Room price : <?php echo htmlspecialchars($room['price']).' LKR per one night';?></li>
+                <!--li>Available rooms : <?php echo htmlspecialchars(ucfirst($room['availrooms']));?></li-->
                 <hr style="width: auto;margin-left: -43px;" id="line">
                 <h3 style="text-align:center;" id="info"> MORE INFO </h3>
               </ul>
