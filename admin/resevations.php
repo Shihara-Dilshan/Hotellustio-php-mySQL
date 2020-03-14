@@ -88,11 +88,11 @@
               <?php  foreach($resevations as $resevation) { ?>
 
                 <tr>
-                <td><?php echo htmlspecialchars($resevation['ResID']);?></td>
-                <td><?php echo htmlspecialchars($resevation['UserID']);?></td>
+                <td><?php echo htmlspecialchars($resevation['id']);?></td>
+                <td><?php echo htmlspecialchars($resevation['uid']);?></td>
                 <td><?php echo htmlspecialchars($resevation['CheckInDate']);?></td>
                 <td><?php echo htmlspecialchars($resevation['CheckOutDate']);?></td>
-                <td><?php echo htmlspecialchars($resevation['Amount']);?></td>
+                <td><?php echo htmlspecialchars($resevation['TotalAmount']);?></td>
                               
                 <td width="400px"><button id="tab2" style="margin-left: 10px;">remove</button></td>
 
