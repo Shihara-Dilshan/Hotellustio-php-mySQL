@@ -46,8 +46,8 @@
 
                 <li>Package id : <?php echo htmlspecialchars($package['PID']);?></li>
                 <li>Package name : <?php echo htmlspecialchars(ucfirst($package['Pname']));?></li>
-                <li>Package price : <?php echo htmlspecialchars($package['Pprice']);?></li>
-                <li>Package Details : <?php echo htmlspecialchars($package['Pdetails']);?></li>
+                <li>Package price : <?php echo htmlspecialchars($package['price']);?></li>
+                <!--li>Package Details : <?php echo htmlspecialchars($package['Pdetails']);?></li-->
                 
 
                 <!--li width="400px"><button id="tab1"> update</button><button id="tab2" style="margin-left: 10px;">delete</button></li-->
