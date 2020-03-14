@@ -18,7 +18,7 @@
         $id = 35 ;
 
        
-        $sql2 = "SELECT * FROM user WHERE Utype = 'A' AND UserName = '$adminname' AND Password = '$apassword' " ;
+        $sql2 = "SELECT * FROM user WHERE Type = 'A' AND UserName = '$adminname' AND Password = '$apassword' " ;
       
         $aresult = mysqli_query($conn,$sql2);
 
@@ -37,9 +37,9 @@
             $_SESSION['alogin'] = true;
             $_SESSION['aname'] = $_POST['aname'];
             $_SESSION['apword'] = $_POST['apword'];
-            $_SESSION['$fname'] = $rows['FullName'];
+            //$_SESSION['$fname'] = $rows['FullName'];
 
-            $_SESSION['$id'] = $rows['UserID'];
+            $_SESSION['$id'] = $rows['id'];
             
             header('Location: admindashboard.php');
         }else
