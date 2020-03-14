@@ -1,7 +1,7 @@
 <?php
   require('includes/config.php');
 
-  $sql = "SELECT * FROM user WHERE Utype != 'A' " ;
+  $sql = "SELECT * FROM user WHERE id != 'A' " ;
       
         $result = mysqli_query($conn,$sql);
 
@@ -9,7 +9,7 @@
         
         $countusers = mysqli_num_rows($result);
 
-  $sql2 = "SELECT * FROM RoomType " ;
+  $sql2 = "SELECT * FROM roomtype " ;
       
         $result2 = mysqli_query($conn,$sql2);
 
@@ -18,7 +18,7 @@
         $countrooms = mysqli_num_rows($result2);
 
 
-  $sql3 = "SELECT * FROM Package " ;
+  $sql3 = "SELECT * FROM package " ;
       
         $result3 = mysqli_query($conn,$sql3);
 
@@ -35,7 +35,7 @@ $sql4 = "SELECT * FROM reservation " ;
         $countresevation = mysqli_num_rows($result4);
 
 
-$sql5 = "SELECT * FROM Room " ;
+$sql5 = "SELECT * FROM room " ;
       
         $result5 = mysqli_query($conn,$sql5);
 
