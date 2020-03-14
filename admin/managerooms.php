@@ -9,7 +9,7 @@
 
   require('includes/config.php');
 
-  $sql = 'SELECT  * FROM RoomType';
+  $sql = 'SELECT  * FROM roomtype';
   
   $result = mysqli_query($conn, $sql);
 
@@ -87,13 +87,13 @@
               <?php  foreach($rooms as $room) { ?>
 
                 <tr>
-                <td><?php echo htmlspecialchars($room['TypeID']);?></td>
-                <td><?php echo htmlspecialchars($room['Rtypename']);?></td>
-                <td><?php echo htmlspecialchars($room['Rtypeprice']);?></td>
-                <td style="font-family: monospace;font-size: 16px;"><?php echo htmlspecialchars($room['TypeDetails']);?></td>
-                <td style="width:auto;"><?php echo htmlspecialchars($room['stock']);?></td>
+                <td><?php echo htmlspecialchars($room['id']);?></td>
+                <td><?php echo htmlspecialchars($room['type']);?></td>
+                <td><?php echo htmlspecialchars($room['price']);?></td>
+                <!--td style="font-family: monospace;font-size: 16px;"><?php echo htmlspecialchars($room['TypeDetails']);?></td-->
+                <!--td style="width:auto;"><?php echo htmlspecialchars($room['stock']);?></td-->
                 
-                <td width="350px"><a href="editroom.php?roomid=<?php echo $room['TypeID'];?>"><button id="tab1"> update</button></a><a href="deleteroom.php"><button id="tab2" style="margin-left: 10px;">delete</button></a></td>
+                <td width="350px"><a href="editroom.php?roomid=<?php echo $room['id'];?>"><button id="tab1"> update</button></a><a href="deleteroom.php"><button id="tab2" style="margin-left: 10px;">delete</button></a></td>
 
               </tr>
            
