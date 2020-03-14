@@ -61,7 +61,7 @@
             $fname = $_SESSION['$fname'];
             $mobile = $_SESSION['$mobile'];
             $email = $_SESSION['$email'];
-            $id = $_SESSION['$id'];
+            $id = $_SESSION['uid'];
            
     
         }
@@ -84,7 +84,7 @@
         $newpassword = mysqli_real_escape_string($conn ,$_POST['npword']);
        
 
-        $sql2 = "SELECT * FROM user WHERE UserID = '$id' AND Password = '$oldpassword'";
+        $sql2 = "SELECT * FROM user WHERE id = '$id' AND Password = '$oldpassword'";
       
         $aresult = mysqli_query($conn,$sql2);
 
@@ -93,7 +93,7 @@
         if(mysqli_num_rows($aresult)==1)
         {
 
-            $sql = "UPDATE user SET Password = '$newpassword' WHERE Password = '$oldpassword' AND UserID = '$id'";
+            $sql = "UPDATE user SET Password = '$newpassword' WHERE Password = '$oldpassword' AND id = '$id'";
             if(mysqli_query($conn,$sql))
             {
             
