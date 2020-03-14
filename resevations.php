@@ -49,8 +49,8 @@
 
   require('includes/config.php');
   
-  $x =$_SESSION['$id'];
-  $sql = "SELECT  * FROM reservation WHERE UserID = '$x'";
+  $x =$_SESSION['uid'];
+  $sql = "SELECT  * FROM reservation WHERE id = '$x'";
   
   $result = mysqli_query($conn, $sql);
 
@@ -103,13 +103,13 @@
               <?php  foreach($resevations as $resevation) { ?>
 
                 <tr>
-                <td><?php echo htmlspecialchars($resevation['ResID']);?></td>
+                <td><?php echo htmlspecialchars($resevation['id']);?></td>
                
                 <td><?php echo htmlspecialchars($resevation['CheckInDate']);?></td>
                 <td><?php echo htmlspecialchars($resevation['CheckOutDate']);?></td>
-                <td><?php echo htmlspecialchars($resevation['Amount']);?></td>
+                <td><?php echo htmlspecialchars($resevation['TotalAmount']);?></td>
                               
-                <td width="400px"><a href="deletereservation.php?resid=<?php echo $resevation['ResID'];?>"><button id="tab2" style="margin-left: 10px;">cancel</button></a></td>
+                <td width="400px"><a href="deletereservation.php?resid=<?php echo $resevation['id'];?>"><button id="tab2" style="margin-left: 10px;">cancel</button></a></td>
 
               </tr>
 
