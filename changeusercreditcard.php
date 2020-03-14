@@ -82,7 +82,7 @@
             $fname = $_SESSION['$fname'];
             $mobile = $_SESSION['$mobile'];
             $email = $_SESSION['$email'];
-            $id = $_SESSION['$id'];
+            $id = $_SESSION['uid'];
            
     
         }
@@ -121,7 +121,7 @@
            if($lengthcreditcard == 16 && $lengthcreditcardpin ==4)
            {
             
-            $sql = "UPDATE user SET CredicardNo = '$newccard' , CardPin = '$newpin'  WHERE Password = '$oldpassword' AND UserID = '$id'";
+            $sql = "UPDATE user SET CredicardNo = '$newccard' , CardPin = '$newpin'  WHERE Password = '$oldpassword' AND id = '$id'";
             if(mysqli_query($conn,$sql))
             {
             
