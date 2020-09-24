@@ -4,7 +4,7 @@
 <html>
 <head>
 	<title>Online Hotel Reservation system</title>
-	<link rel="stylesheet" type="text/css" href="assets/css25/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css26/style.css">
 	<script src="assets/js/script5.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <body background="assets/images/11568168178_tmp_bricks-brickwall-brickwork-276514.jpg">

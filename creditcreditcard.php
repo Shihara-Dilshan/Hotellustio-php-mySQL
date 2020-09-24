@@ -6,7 +6,7 @@
 <html>
 <head>
 	<title>Online Hotel Reservation system</title>
-	<link rel="stylesheet" type="text/css" href="assets/css21/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css26/style.css">
 	<script src="assets/js/script6.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <body background="assets/images/marina-bay-sands-1920x1080-infinity-pool-pool-hotel-travel-booking-336.jpg">
