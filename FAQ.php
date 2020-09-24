@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css25/style.css">
 	<script src="assets/js/script5.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+	<!--Remastering-->
 <body background="assets/images/marina-bay-sands-1920x1080-infinity-pool-pool-hotel-travel-booking-336.jpg" >
    
    	<!--INCLUDING HEADER AND THE NEVIGATION --->
